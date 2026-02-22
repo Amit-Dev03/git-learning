@@ -1,7 +1,8 @@
-FROM node:18-alpine
+FROM nginx:alpine
 
 WORKDIR /app
 
-COPY . .
+COPY . /usr/share/nginx/html/
 
-CMD [ "start", "index.html" ]
+EXPOSE 80
+
